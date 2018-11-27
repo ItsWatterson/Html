@@ -1,0 +1,96 @@
+<meta charset="UTF=8">
+
+<script src="funcoes.js"></script>
+
+
+<h2> Calculo de Pontos </h2>
+
+<script>
+
+linha()
+linha()
+
+    var vitoriaTime1 = pegaNumero("Digite a quantidade de vitórias do Brasil");
+    var empatesTime1 = pegaNumero("Digite a quantidade de empates do Brasil");
+
+    var vitoriaTime2 = pegaNumero("Digite a quantidade de vitórias da Alemanha");
+    var empatesTime2 = pegaNumero("Digite a quantidade de empates da Alemanha");
+
+    var pontosTime1 = vitoriaTime1 * 3 + empatesTime1
+    var pontosTime2 = vitoriaTime2 * 3 + empatesTime2
+
+    if(pontosTime1 > pontosTime2) {
+        imprima("<strong>O BRASIL ESTÁ VENCENDO</strong>")
+        pulalinha()
+
+        imprima("Dados do <strong>Brasil</strong>")
+        pulalinha()
+
+        imprima("Quantidade de Vitórias: " + vitoriaTime1 + " - Totalizando: " + vitoriaTime1*3 + " pontos")
+        pulalinha()
+
+        imprima("Quantidade de Empates: " + empatesTime1 + " - Totalizando: " + empatesTime1 + " pontos")
+        pulalinha()
+
+        imprima("BRASIL ESTÁ COM UM TOTAL DE <strong>" + pontosTime1 + " PONTOS </strong>")
+        pulalinha()
+        pulalinha()
+
+        linha()
+//////// DADOS DA ALEMANHA /////////////
+        imprima("Dados da <strong>Alemanha</strong>")
+        pulalinha()
+
+        imprima("Quantidade de Vitórias: " + vitoriaTime2 + " - Totalizando: " + vitoriaTime2*3 + " pontos")
+        pulalinha()
+
+        imprima("Quantidade de Empates: " + empatesTime2 + " - Totalizando: " + empatesTime2 + " pontos")
+        pulalinha()
+
+        imprima("ALEMANHA ESTÁ COM UM TOTAL DE <strong>" + pontosTime2 + " PONTOS </strong>")
+        pulalinha()
+
+
+    }
+
+    if(pontosTime1 < pontosTime2) {
+        imprima("<strong>A ALEMANHA ESTÁ VENCENDO</strong>")
+        pulalinha()
+
+        imprima("Dados do <strong>Alemanha</strong>")
+        pulalinha()
+
+        imprima("Quantidade de Vitórias: " + vitoriaTime2 + " - Totalizando: " + vitoriaTime2*3 + " pontos")
+        pulalinha()
+
+        imprima("Quantidade de Empates: " + empatesTime2 + " - Totalizando: " + empatesTime2 + " pontos")
+        pulalinha()
+
+        imprima("ALEMANHA ESTÁ COM UM TOTAL DE <strong>" + pontosTime2 + " PONTOS </strong>")
+        pulalinha()
+        pulalinha()
+
+        linha()
+//////// DADOS DO BRASIL //////////////////
+        imprima("Dados do <strong>Brasil</strong>")
+        pulalinha()
+
+        imprima("Quantidade de Vitórias: " + vitoriaTime1 + " - Totalizando: " + vitoriaTime1*3 + " pontos")
+        pulalinha()
+
+        imprima("Quantidade de Empates: " + empatesTime1 + " - Totalizando: " + empatesTime1 + " pontos")
+        pulalinha()
+
+        imprima("BRASIL ESTÁ COM UM TOTAL DE <strong>" + pontosTime1 + " PONTOS </strong>")
+        pulalinha()
+    }
+
+    linha()
+
+    if(pontosTime1 == pontosTime2) {
+        imprima("OS TIMES ESTÃO <strong>EMPATADOS</strong> com " + pontosTime1 + " pontos")
+    }
+
+linha()
+linha()
+</script>

@@ -1,0 +1,82 @@
+<meta charset="utf-8">
+
+<hr></hr>
+<hr></hr>
+
+<h2>Gasto - Uber VS Carro</h2>
+
+<script src="funcoes.js"></script>
+
+<!--PERGUNTANDO PARA O USUÁRIO A DISTÂNCIA DE SUA VIAGEM-->
+<script>
+	linha()
+	linha()
+
+	// SEGUNDO NIVEL DE TITULO - UBER
+		imprima("<h3>Gasto com UBER</h3>")
+
+		// DECLARANDO VARIAVEIS
+		var precoBase = parseFloat(2.00);
+		var precoPorMinuto = parseFloat(0.26);
+		var kmRodado = parseFloat(1.40);
+		var distancia = pegaNumero("Digite a distancia da Viagem")
+
+		// IMPRIMINDO VALORES
+		imprima("<strong> Informações sobre o preço do UBER </strong>");
+		pulalinha();
+		
+		imprima("Uber está cobrando <strong>R$" + formataMoeda(precoBase) + "</strong> de Preço Base da viagem.");
+		pulalinha();
+
+		imprima("Uber está cobrando <strong>R$" + formataMoeda(precoPorMinuto) + "</strong> por minuto de viagem.");
+		pulalinha();
+
+		imprima("Uber está cobrando <strong>R$" + formataMoeda(kmRodado) + "</strong> por KM rodado.");
+		pulalinha();
+
+		imprima("Distância percorrida: <strong>" + distancia.toFixed(2) + " Km</strong>");
+		pulalinha();
+
+		var totalUber = calcUber(distancia);
+		imprima("Total: R$ <strong>" + formataMoeda(totalUber) + "</strong>");
+
+
+	linha()
+	linha()
+
+	// SEGUNDO NIVEL DE TITULO - CARRO
+		imprima("<h3>Gasto com Carro</h3>")
+
+			
+		// PEDINDO O VALOR DA GASOLINA
+		var gasolina = pegaNumero("Digite o valor da Gasolina")
+
+		// PERGUNTANDO O VALOR DO ESTACIONAMENTO
+		var estacionamento = pegaNumero("Digite o valor do Estacionamento")
+
+		// PERGUNTANDO QUANDO O CARRO GASTA POR LITRO
+		var litro = pegaNumero("Digite quanto seu carro gasta por litro")
+
+		// CALCULO DO PREÇO DA GASOLINA
+		var precoDaGasolina = calcGaso(gasolina,distancia,litro)
+
+			// IMPRIMINDO
+			imprima("Distância percorrida:<strong> " + distancia.toFixed(2) + " KM </strong>")
+			pulalinha();
+
+			imprima("Valor da Gasolina: <strong>R$ " + formataMoeda(gasolina) + "</strong>")
+			pulalinha();
+
+			imprima("Gasto com Gasolina: <strong>R$ " + formataMoeda(precoDaGasolina) + "</strong>")
+			pulalinha();
+
+			imprima("Gasto com estacionamento: <strong>R$ " + formataMoeda(estacionamento) + "</strong>")
+			pulalinha();
+
+			var totalCarro = precoDaGasolina+estacionamento
+			imprima("Gasto Total: <strong>R$ " + formataMoeda(totalCarro) + "</strong>")
+
+	linha()
+	linha()
+
+</script>

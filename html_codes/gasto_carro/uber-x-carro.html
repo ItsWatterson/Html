@@ -1,0 +1,86 @@
+<meta charset="utf-8">
+
+<hr></hr>
+<hr></hr>
+
+<h2>Gasto - Uber VS Carro</h2>
+
+<!--PERGUNTANDO PARA O USUÁRIO A DISTÂNCIA DE SUA VIAGEM-->
+<script>
+	document.write("<hr></hr>")
+	document.write("<hr></hr>")
+
+	function pulalinha() {
+		document.write("<br>")
+	}
+
+	function pegaNumero {
+		parseInt(prompt(""))
+	}
+
+	// SEGUNDO NIVEL DE TITULO - UBER
+	var distancia = parseInt(prompt("Digite a distância de sua viagem: "))
+	var precoBase = parseFloat(2.00)
+	var precoPorMinuto = parseFloat(0.26)
+	var velocidade = parseFloat(29.9)
+	var tempoDeViagem = (distancia/velocidade)*60
+	// var tempoDeViagem = parseInt(prompt("Digite o tempo da Viagem"))
+	var kmRodado = parseFloat(1.40)
+
+	document.write("<h3>Gasto com UBER</h3>")
+
+		document.write("<strong> Informações sobre o preço do UBER </strong>")
+		pulalinha();
+		document.write("Uber está cobrando <strong>R$" + precoBase.toFixed(2).replace(".",",") + "</strong> de Preço Base da viagem.")
+		pulalinha();
+		document.write("Uber está cobrando <strong>R$" + precoPorMinuto.toFixed(2).replace(".",",") + "</strong> por minuto de viagem.")
+		pulalinha();
+		document.write("Uber está cobrando <strong>R$" + kmRodado.toFixed(2).replace(".",",") + "</strong> por KM rodado.")
+		pulalinha();
+		pulalinha();
+
+		document.write("Distância percorrida: <strong>" + distancia + " Km</strong>")
+		pulalinha();
+
+		var total = precoBase+(precoPorMinuto*tempoDeViagem)+(kmRodado*distancia)
+		document.write("Total: R$ <strong>" + total.toFixed(2).replace(".",",") + "</strong>")
+
+		// =======================================================================
+
+	document.write("<hr></hr>")
+
+	// SEGUNDO NIVEL DE TITULO - CARRO
+	document.write("<h3>Gasto com Carro</h3>")
+
+		// PEDINDO O VALOR DA GASOLINA
+		var gasolina = parseFloat(prompt("Digite o valor da gasolina: ").replace(",","."))
+
+		// PERGUNTANDO O VALOR DO ESTACIONAMENTO
+		var estacionamento = parseFloat(prompt("Digite o valor do estacionamento: ").replace(",","."))
+
+		// PERGUNTANDO QUANDO O CARRO GASTA POR LITRO
+		var litro = parseFloat(prompt("Digite o valor que seu carro gasta por litro: ").replace(",","."))
+
+		// CALCULO DO PREÇO DA GASOLINA
+		var precoDaGasolina = gasolina*distancia/litro
+
+		// IMPRIMINDO
+		document.write("Distância percorrida:<strong> " + distancia + "</strong> Km")
+		pulalinha();
+
+		document.write("Valor da Gasolina: <strong>R$ " + gasolina.toFixed(2).replace(".",",") + "</strong>")
+		pulalinha();
+
+		document.write("Gasto com Gasolina: <strong>R$ " + precoDaGasolina.toFixed(2).replace(".",",") + "</strong>")
+		pulalinha();
+
+		document.write("Gasto com estacionamento: <strong>R$ " + estacionamento.toFixed(2).replace(".",",") + "</strong>")
+		pulalinha();
+
+		var totalCarro = precoDaGasolina+estacionamento
+		document.write("Gasto Total: <strong>R$ " + totalCarro.toFixed(2).replace(".",",") + "</strong>")
+
+		document.write("<hr></hr>")
+		document.write("<hr></hr>")
+
+</script>

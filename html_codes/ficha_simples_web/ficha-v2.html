@@ -1,0 +1,21 @@
+<meta charset="utf=8">
+
+<script src="funcoes.js"></script>
+
+<h1> Fichas da Academia </h1>
+
+<script>
+
+    var nome = prompt("Digite seu Nome")
+    var peso = pegaNumero("Digite seu Peso: ")
+    var altura = pegaNumero("Digite sua Altura: ")
+    var imc = calcImc(peso,altura)
+    var idade = pegaNumero("Digite sua Idade: ")
+
+    imprima("Nome: " + nome)
+    imprima("Idade: " + idade)
+    imprima("Peso: " + peso)
+    imprima("Altura: " + altura)
+    imprima("IMC: " + formataMoeda(imc))
+
+</script>

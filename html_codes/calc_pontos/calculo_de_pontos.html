@@ -1,0 +1,37 @@
+<meta charset="UTF=8">
+
+<script src="funcoes.js"></script>
+
+
+<h2> Calculo de Pontos </h2>
+
+<script>
+
+linha()
+linha()
+
+    var vitoriaTime1 = pegaNumero("Digite a quantidade de vitórias do Brasil");
+    var empatesTime1 = pegaNumero("Digite a quantidade de empates do Brasil");
+
+    var vitoriaTime2 = pegaNumero("Digite a quantidade de vitórias da Alemanha");
+    var empatesTime2 = pegaNumero("Digite a quantidade de empates da Alemanha");
+
+    var pontosTime1 = vitoriaTime1 * 3 + empatesTime1
+    var pontosTime2 = vitoriaTime2 * 3 + empatesTime2
+
+    if(pontosTime1 > pontosTime2) {
+        imprima("<strong>O BRASIL ESTÁ VENCENDO</strong>")
+        pulalinha()
+
+    }
+
+    if(pontosTime1 < pontosTime2) {
+        imprima("<strong>A ALEMANHA ESTÁ VENCENDO<strong>")
+        pulalinha()
+        }
+
+    if(pontosTime1 == pontosTime2) {
+        imprima("Os times estão empatados")
+    }
+
+</script>

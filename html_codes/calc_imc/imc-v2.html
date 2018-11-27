@@ -1,0 +1,56 @@
+<meta charset="UTF=8">
+
+<script src="funcoes.js"></script>
+
+<h2> CALCULO DE IMC </h2>
+
+Tabela de IMC <strong>(Índice de Massa Corporal)</strong>
+
+<br></br>
+
+<script>
+    
+    document.write("Abaixo de 17.........<strong> Muito abaixo do peso </strong>")
+    pulalinha()
+
+    document.write("Entre 17 e 18,.......<strong> Abaixo do peso </strong>")
+    pulalinha()
+
+    document.write("Entre 18,5 e 24......<strong> Peso normal </strong>")
+    pulalinha()
+
+    document.write("Entre 25 e 29........<strong> Acima do peso </strong>")
+    pulalinha()
+
+    document.write("Entre 30 e 34........<strong> Obesidade I </strong>")
+    pulalinha()
+
+    document.write("Entre 35 e 39........<strong> Obesidade II (severa) </strong>")
+    pulalinha()
+
+    document.write("Acima de 40..........<strong> Obesidade III (mórbida) </strong>")
+    pulalinha()
+    pulalinha()
+
+</script>
+
+<script>       
+
+        var imc = calcImc()
+        document.write("O Seu IMC é = " + formataMoeda(imc))
+        pulalinha()
+ 
+        if(imc < 18.5) {
+            document.write("Você está abaixo do Peso!");
+        }
+
+        if(imc >= 18.5 && imc <= 25) {
+            idocument.write("Você está no Peso Ideal")
+        }
+
+        if(imc > 25) {
+            document.write("Você está Acima do Peso")
+        }
+    
+
+</script>

@@ -1,0 +1,101 @@
+<meta charset="utf-8">
+
+<hr></hr>
+<hr></hr>
+
+<h2>Gasto - Uber VS Carro</h2>
+
+<script src="funcoes.js"></script>
+
+<!--PERGUNTANDO PARA O USUÁRIO A DISTÂNCIA DE SUA VIAGEM-->
+<script>
+	document.write("<hr></hr>")
+	document.write("<hr></hr>")
+
+	// SEGUNDO NIVEL DE TITULO - UBER
+	var mensagem = "Digite a distancia da Viagem"
+	var distancia = pegaNumero()
+
+	var precoBase = parseFloat(2.00)
+
+	var precoPorMinuto = parseFloat(0.26)
+	
+	var velocidade = parseFloat(29.9)
+	
+	var tempoDeViagem = (distancia/velocidade)*60
+
+	var kmRodado = parseFloat(1.40)
+
+	document.write("<h3>Gasto com UBER</h3>")
+
+		document.write("<strong> Informações sobre o preço do UBER </strong>")
+		pulalinha();
+		
+		numero = precoBase
+		document.write("Uber está cobrando <strong>R$" + formataMoeda() + "</strong> de Preço Base da viagem.")
+		pulalinha();
+
+		numero = precoPorMinuto
+		document.write("Uber está cobrando <strong>R$" + formataMoeda() + "</strong> por minuto de viagem.")
+		pulalinha();
+
+		numero = kmRodado
+		document.write("Uber está cobrando <strong>R$" + formataMoeda() + "</strong> por KM rodado.")
+		pulalinha();
+		pulalinha();
+
+		numero = distancia
+		document.write("Distância percorrida: <strong>" + formataMoeda() + " Km</strong>")
+		pulalinha();
+
+		var total = precoBase+(precoPorMinuto*tempoDeViagem)+(kmRodado*distancia)
+		numero = total
+		document.write("Total: R$ <strong>" + formataMoeda() + "</strong>")
+
+		// =======================================================================
+
+	document.write("<hr></hr>")
+
+	// SEGUNDO NIVEL DE TITULO - CARRO
+	document.write("<h3>Gasto com Carro</h3>")
+
+		// PEDINDO O VALOR DA GASOLINA
+		var mensagem = "Digite o valor da Gasolina"
+		var gasolina = pegaNumero()
+
+		// PERGUNTANDO O VALOR DO ESTACIONAMENTO
+		var mensagem = "Digite o valor do Estacionamento"
+		var estacionamento = pegaNumero()
+
+		// PERGUNTANDO QUANDO O CARRO GASTA POR LITRO
+		var mensagem = "Digite quanto o seu Carro faz por Litro"
+		var litro = pegaNumero()
+
+		// CALCULO DO PREÇO DA GASOLINA
+		var precoDaGasolina = gasolina*distancia/litro
+
+		// IMPRIMINDO
+		numero = distancia
+		document.write("Distância percorrida:<strong> " + formataMoeda() + "</strong> Km")
+		pulalinha();
+
+		numero = gasolina
+		document.write("Valor da Gasolina: <strong>R$ " + formataMoeda() + "</strong>")
+		pulalinha();
+
+		numero = precoDaGasolina
+		document.write("Gasto com Gasolina: <strong>R$ " + formataMoeda() + "</strong>")
+		pulalinha();
+
+		numero = estacionamento
+		document.write("Gasto com estacionamento: <strong>R$ " + formataMoeda() + "</strong>")
+		pulalinha();
+
+		var totalCarro = precoDaGasolina+estacionamento
+		numero = totalCarro
+		document.write("Gasto Total: <strong>R$ " + formataMoeda() + "</strong>")
+
+		document.write("<hr></hr>")
+		document.write("<hr></hr>")
+
+</script>

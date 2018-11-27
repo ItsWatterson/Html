@@ -1,0 +1,43 @@
+<meta charset="UTF=8">
+
+<script src="funcoes.js"></script>
+
+<h1> Jogo da Advinhação </h1>
+<hr></hr>
+
+<button id="botao"> START </button>
+
+<script>
+
+    function executaJogo() {
+        
+        var numeroSorteio = Math.ceil(Math.random() * 10);
+
+        // EXIBINDO NO CONSOLE
+        console.log(numeroSorteio);
+
+        var numeroDigitado = pegaNumero("Qual o numero sorteado ");
+        
+
+        if( numeroDigitado == numeroSorteio ) {
+
+            // VOCÊ ACERTOU
+            linha()
+            imprima("<h2> Parabens, você acertou! </h2>");
+            document.write("<h4> Número Digitado: " + numeroDigitado + "</h4>")
+            document.write("<h4> Número Sorteado: " + numeroSorteio + "</h4>")
+
+        } else {
+
+            // VOCÊ ERROU
+            linha()
+            imprima("<h4> Ohhh, que pena, você errou </h4>");
+            document.write("<h4> Número Digitado: " + numeroDigitado + "</h4>")
+            document.write("<h4> Número Sorteado: " + numeroSorteio + "</h4>");
+        }
+    }
+
+    var botao = document.getElementById("botao");
+    botao.onclick = executaJogo;
+    
+</script>

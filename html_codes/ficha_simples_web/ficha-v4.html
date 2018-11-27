@@ -1,0 +1,63 @@
+<meta charset="utf=8">
+
+<script src="funcoes.js"></script>
+
+<h1> Fichas da Academia </h1>
+
+<script>
+
+    var nome = prompt("Digite seu Nome");
+    var peso = pegaNumero("Digite seu Peso: ");
+    var altura = pegaNumero("Digite sua Altura: ");
+    var imc = calcImc(peso,altura);
+
+    var diaNascimento = pegaNumero("Dia de Nascimento: ");
+    var mesNascimento = pegaNumero("Mes de Nascimento: ");
+    var anoNascimento = pegaNumero("Ano de Nascimento: ");
+
+    var dataAtual = new Date();
+    var diaAtual = dataAtual.getDate();
+    var mesAtual = dataAtual.getMonth() + 1;
+    var anoAtual = dataAtual.getFullYear();
+
+    // TESTANDO NO CONSOLE
+    console.log(diaAtual + "/" + mesAtual + "/" + anoAtual);
+
+
+    var idade = anoAtual - anoNascimento;
+
+    if( mesAtual < mesNascimento ) {
+
+        if( mesAtual < mesNascimento) {
+            // AINDA NÃO FEZ ANIVERSÁRIO
+            idade = idade - 1;
+
+        } else if( mesAtual == mesNascimento ) {
+            // NÃO TEM COMO SABER
+
+            if( diaAtual < diaNascimento ) {
+                // AINDA NÃO FEZ ANIVERSÁRIO
+                idade = idade - 1;
+
+            } else if( diaAtual == diaNascimento ) {
+                // DIA DO ANIVERSÁRIO
+                idade = idade + 0;
+
+            } else {
+                // JÁ FEZ ANIVERSÁRIO
+                idade = idade + 0;
+
+            }
+        } else {
+            // JÁ FEZ ANIVERSÁRIO
+            idade = idade + 0;
+
+        }
+    }
+
+
+
+
+    imprimeFicha(nome,idade,peso,altura,imc);
+
+</script>
